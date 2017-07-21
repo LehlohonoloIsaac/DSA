@@ -5,11 +5,9 @@ import UIKit
 struct Queue<T>{
 
     fileprivate var data:[T] = [T]()
-    var top:Int
     
     init(data: [T]) {
         self.data = data
-        top = -1
     }
     
     func isEmpty() -> Bool{
@@ -44,7 +42,6 @@ var data:[Int] = [Int]()
 var queue = Queue(data: data)
 
 print(queue.isEmpty())
-print(queue.top)
 
 queue.push(value: 3)
 queue.push(value: 4)

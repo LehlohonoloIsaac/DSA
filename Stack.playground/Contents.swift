@@ -11,20 +11,20 @@ struct Stack<T>{
         top = -1
     }
     
-    public mutating func push(value: T){
+    mutating func push(value: T){
         top = top + 1
         data.append(value)
     }
     
-    public func isEmpty() -> Bool{
+    func isEmpty() -> Bool{
         return data.isEmpty
     }
     
-    public func size() -> Int {
+    func size() -> Int {
         return data.count
     }
     
-    public mutating func pop() -> T{
+    mutating func pop() -> T{
         guard let value = data.popLast() else {return -1 as! T }
         top = top - 1
         return value
